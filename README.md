@@ -184,7 +184,7 @@ JSX가 자바스크립트로 제대로 변환되기 위한 규칙
    * `-` 로 구분된 이름은 `backgroundColor` 처럼 camelCase 형태로
    * class 설정 시 `class=` 가 아닌 `className=` 으로 설정
 
-5. 주석
+5. **주석**
 
    `{/* 이런 형태로 */}`
 
