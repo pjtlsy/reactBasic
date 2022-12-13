@@ -408,3 +408,25 @@ useState로 컴포넌트에서 바뀌는 값 관리
 ---
 
 <br />
+
+input 상태 관리
+
+input의 `onChange` 라는 이벤트 사용
+
+이벤트에 등록하는 함수에서는 이벤트 객체 `e`를 파라미터로 받아와서 사용 가능
+
+이 객체의 `e.target`은 이벤트가 발생한 DOM인 input DOM 가리킴
+
+이 DOM의 `value` 값, 즉 `e.target.value` 를 조회하면 현재 input에 입력한 값이 무엇인지 알 수 있음
+
+이 값을 `useState`로 관리
+
+<br />
+
+input의 상태 관리 시 input 태그의 `value` 값도 설정해준다(상태 바뀌었을 때 input 내용 업데이트)
+
+<br />
+
+---
+
+<br />
