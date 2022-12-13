@@ -338,3 +338,61 @@ export default Wrapper;
 ---
 
 <br />
+
+조건부 렌더링
+
+특정 조건에 따라 다른 결과물 렌더링
+
+App.js
+
+```jsx
+import React from 'react';
+import Hello from './Hello';
+import Wrapper from './Wrapper';
+
+
+function App() {
+  return (
+    <Wrapper>
+      <Hello name="react" color="red" isSpecial={true}/>
+      <Hello color="pink" />
+    </Wrapper>
+  )
+}
+
+export default App;
+```
+
+Hello 컴포넌트에서 isSpecial이 true이냐 false이냐에 따라 컴포넌트 좌측에 * 표시
+
+Hello.js
+
+```jsx
+import React from 'react';
+
+function Hello({ color, name, isSpecial }) {
+  return (
+    <div style={{ color }}>
+      { isSpecial ? <b>*</b> : null }
+      { isSpecial && <b>*</b> }
+      안녕하세요 {name}
+    </div>
+  );
+}
+
+Hello.defaultProps = {
+  name: '이름없음'
+}
+
+export default Hello;
+```
+
+JSX에서 null, false, undefined 렌더링하게 되면 아무것도 나타나지 않음
+
+컴포넌트의 props 값을 설정하게 될 때 props 이름만 작성하고 값 설정을 생략하면, 이를 true로 설정한 것으로 간주
+
+<br />
+
+---
+
+<br />
