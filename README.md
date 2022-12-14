@@ -453,3 +453,34 @@ input에 `name` 설정하고 이벤트 발생 시 이 값을 참조한다
 
 ---
 
+<br />
+
+useRef로 특정 DOM 선택
+
+자바스크립트에서 특정 DOM 선택 시 DOM Selector 함수(`getElementById`, `querySelector` 등)를 사용했듯 리액트에서는 `ref` 사용
+
+<br />
+
+함수형 컴포넌트에서 `ref` 사용 시 `useRef` 라는 Hook 함수를 사용
+
+(클래스형 컴포넌트에서는 콜백 함수나 `React.createRef` 함수 사용)
+
+<br />
+
+초기화 버튼 클릭 시 포커스가 이름 input에 잡히도록 하기
+
+`useRef()` 사용하여 Ref 객체 만들고,
+
+이 객체를 선택하고 싶은 DOM에 `ref` 값으로 설정해준다
+
+그렇게 하면, Ref 객체의 `.current` 값은 원하는 DOM을 가리키게 된다
+
+그 후 `onReset` 함수에서 input에 포커스를 하는 `focus()` DOM API 호출
+
+코드 참고 
+
+<br />
+
+---
+
+<br />

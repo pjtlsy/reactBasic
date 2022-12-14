@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 function Input() {
   //   const [text, setText] = useState('');
@@ -6,6 +6,8 @@ function Input() {
     name: '',
     nickname: '',
   });
+
+  const nameInput = useRef(); // 초기화 클릭 시 이름 input에 포커스 잡히도록 하기 위해 추가
 
   const { name, nickname } = inputs; // 비구조화 할당 통해 값 추출
 
@@ -28,12 +30,19 @@ function Input() {
       name: '',
       nickname: '',
     });
+    nameInput.current.focus(); // 초기화 클릭 시 이름 input에 포커스 잡히도록 하기 위해 추가
   };
 
   return (
     <div>
       {/* <input onChange={onChange} value={text} /> */}
-      <input name="name" placeholder="이름" onChange={onChange} value={name} />
+      <input
+        name="name"
+        placeholder="이름"
+        onChange={onChange}
+        value={name}
+        ref={nameInput}
+      />
       <input
         name="nickname"
         placeholder="닉네임"
