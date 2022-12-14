@@ -10,8 +10,12 @@ function Input() {
   const { name, nickname } = inputs; // 비구조화 할당 통해 값 추출
 
   const onChange = (e) => {
+    console.log(e);
+    console.log(e.target);
     // setText(e.target.value);
-    const { value, name } = e.target; // 우선 e.target에서 name과 value 추출
+    const { name, value } = e.target; // 우선 e.target에서 name과 value 추출
+    console.log(name);
+    console.log(value);
     setInputs({
       ...inputs, // 기존의 input 객체를 복사한 뒤
       [name]: value, // name 키를 가진 값을 value로 설정
