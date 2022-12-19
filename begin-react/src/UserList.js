@@ -9,24 +9,24 @@ function User({ user }) {
   );
 }
 
-function UserList() {
-  const users = [
-    {
-      id: 1,
-      username: 'seolyu',
-      email: 'seolyu@seolyu.com',
-    },
-    {
-      id: 2,
-      username: 'seolyu1',
-      email: 'seolyu1@seolyu1.com',
-    },
-    {
-      id: 3,
-      username: 'seolyu2',
-      email: 'seolyu2@seolyu2.com',
-    },
-  ];
+function UserList({ users }) {
+  //   const users = [
+  //     {
+  //       id: 1,
+  //       username: 'seolyu',
+  //       email: 'seolyu@seolyu.com',
+  //     },
+  //     {
+  //       id: 2,
+  //       username: 'seolyu1',
+  //       email: 'seolyu1@seolyu1.com',
+  //     },
+  //     {
+  //       id: 3,
+  //       username: 'seolyu2',
+  //       email: 'seolyu2@seolyu2.com',
+  //     },
+  //   ];
   return (
     <div>
       {/* <div>
